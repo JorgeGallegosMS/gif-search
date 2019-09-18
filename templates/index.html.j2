@@ -1,9 +1,21 @@
-<!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
-{% extends 'base.html.j2' %}
+
+
+  {% extends 'base.html.j2' %}
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string -->
 {% block content %}
     <h1>Welcome to Gif Search</h1>
+
+    <form class="" action="/">
+      <input type="search" name="search">
+      <button type="submit">Search</button>
+
+    </form>
+
+
+    {% for gif in gifs %}
+        {% include 'gif.html.j2' %}
+    {% endfor %}
 {% endblock %}
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
