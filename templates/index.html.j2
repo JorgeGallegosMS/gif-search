@@ -1,15 +1,19 @@
 
-
   {% extends 'base.html.j2' %}
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string -->
 {% block content %}
-    <h1>Welcome to Gif Search</h1>
+    <div id="loading"></div>
+    <h1><span class = "header">Welcome to Gif Search</span></h1>
 
     <form class="" action="/">
-      <input type="search" name="search">
-      <button type="submit">Search</button>
+      <!-- <padding-top: 10px;
+padding-right: 5px;
+padding-bottom: 3px;
+padding-left: 2px;> -->
 
+      <input type="search" class="searchbar" name="search" placeholder="Search..."/>
+      <button type="submit" class="searchbox">Search</button>
     </form>
 
 
