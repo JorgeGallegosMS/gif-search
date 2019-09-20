@@ -1,26 +1,23 @@
+{% extends 'base.html.j2' %}
 
-  {% extends 'base.html.j2' %}
-<!-- TODO: Make an HTML form containing a search box and a submit button to add
-    the search term to the query string -->
 {% block content %}
     <div id="loading"></div>
     <h1><span class = "header">Welcome to Gif Search</span></h1>
 
+    <!-- get search term from the user -->
     <form class="" action="/">
-      <!-- <padding-top: 10px;
-padding-right: 5px;
-padding-bottom: 3px;
-padding-left: 2px;> -->
-
       <input type="search" class="searchbar" name="search" placeholder="Search..."/>
-      <button type="submit" class="searchbox">Search</button>
+      <button type="submit" class="searchbutton">Search</button>
     </form>
 
-
-    {% for gif in gifs %}
-        {% include 'gif.html.j2' %}
-    {% endfor %}
+    <!-- displays message if no gifs are found -->
+    {% if gifs %}
+        {% for gif in gifs %}
+            {% include 'gif.html.j2' %}
+        {% endfor %}
+    {% else %}
+    <div class="error">
+        <h1>There are no gifs to display, please try again with another search term</h1>
+    </div>
+    {% endif %}
 {% endblock %}
-<!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
-
-<!-- TODO: For each gif, include the 'gif.html' template to display it -->
