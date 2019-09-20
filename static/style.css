@@ -8,15 +8,19 @@ body {
       grid-column-gap: 25px;
       grid-row-gap: 25px;
       width:100%;
+      border: 25%;
 }
 
-input[type=text]{
-  background-color: #228B22
-  color: red;
-  width: 20px
-  padding: 50px
-  border: 6px solid blue;
-  font-size: 100px
+.searchbutton {
+  border: 2px lightblue;
+  background-color: lightgreen;
+}
+.searchbar {
+  border: 1px lightgrey;
+  margin-top: 40px;
+  width: 50%;
+  height: 40%;
+  background-color: lightblue;
 }
 
 header {
@@ -33,36 +37,3 @@ h1 {
     margin: 15x;
     padding: 4px; */
 }
-/* .grid-container {
-  display: grid;
-  grid-template-rows: repeat(4, 100px);
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem
-  padding: 10px */
-
-  /* <div class="grid-container">
-    <div class="grid-item">1</div>
-    <div class="grid-item">2</div>
-    <div class="grid-item">3</div>
-    <div class="grid-item">4</div>
-    <div class="grid-item">5</div>
-    <div class="grid-item">6</div>
-    <div class="grid-item">7</div>
-    <div class="grid-item">8</div>
-    <div class="grid-item">9</div>
-    <div class="grid-item">10</div>
-  </div>
-
-} */
-
-
-
-
-/* h1 {
-  font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
-  color: #2b2b2b;
-  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
-} */
-/* p {
-  color: gray;
-} */
