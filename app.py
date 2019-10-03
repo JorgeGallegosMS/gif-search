@@ -1,6 +1,12 @@
 from flask import Flask, render_template, request
 import requests
 import json
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
+
+TENOR_API_KEY = os.getenv("TENOR_API_KEY")
 
 app = Flask(__name__)
 
@@ -13,7 +19,7 @@ def index():
     # params dict with query term and API key
     params = {
         "q": q,
-        "key": "C8UDZFA60WIT",
+        "key": TENOR_API_KEY,
         "limit": 10,
         "media_filter": "minimal"
     }
